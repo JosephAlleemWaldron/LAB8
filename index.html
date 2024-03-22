@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Display for question 1 </h2>
+    <p id="question1"></p>
+    <p id="question1.2"></p>
+    <p id="question1.3"></p>
+    <p id="question1.4"></p>
+
+
+    <h2>Display for question 2 </h2>
+    <p id="question2"></p>
+
+
+
+    <h2>Display for question 3 </h2>
+    <p>When the value of x is changed, an the code that follows does not work</p>
+    <p id="question3"></p>
+
+
+
+
+    <h2>Display for question 4 </h2>
+    <label id="countlabel">0</label><br>
+    <button id="decreasebtn">Decrease</button>
+    <button id="reset">Reset</button>
+    <button id="increasebtn">Increase</button>
+
+
+
+    <h2>Display for question 5</h2>
+    <p id="question5"></p>
+    <p id="question5.2"></p>
+    
+    
+    <script>
+
+        // Javascript for question 1 
+        let num1 = 10;
+        let num2 = 5;
+
+        document.getElementById("question1").innerHTML = " Addition  num1 + num2: " + (num1+num2);
+        document.getElementById("question1.2").innerHTML = " Subtraction  num1 - num2: " + (num1-num2);
+        document.getElementById("question1.3").innerHTML = " multiplication  num1 * num2: " + (num1*num2);
+        document.getElementById("question1.4").innerHTML = " Devision  num1 / num2: " + (num1/num2);
+
+
+
+
+        // Javascript for question 2
+        let firstName = "Joseph";
+        let lastName = "Waldron";
+
+        document.getElementById("question2").innerHTML = "My fullname is " + firstName+ lastName
+
+
+        //Javascript for question 3
+
+       let x = 5;
+       var y = 10;
+       //let x = 6;
+      //var y = 7;
+
+       document.getElementById("question3").innerHTML = "The value of x is " + x + " The value of y is " + y
+
+
+       //Javascript for question 4
+       let count = 0;
+
+
+       document.getElementById("decreasebtn").onclick = function(){
+        count-=1;
+        document.getElementById("countlabel").innerHTML = count;
+       }
+       document.getElementById("reset").onclick = function(){
+        count=0;
+        document.getElementById("countlabel").innerHTML = count;
+       }
+       document.getElementById("increasebtn").onclick = function(){
+        count+=1;
+        document.getElementById("countlabel").innerHTML = count;
+       }
+
+
+       //Javascript for question 5
+
+       let number1 = window.prompt('enter first number');
+       let number2 = window.prompt('enter second number');
+
+       number1 = Number(number1);
+       number2 = Number(number2);
+
+
+       document.getElementById("question5").innerHTML = " sum of  number1 + number2: " + (number1+number2);
+
+
+       let age = window.prompt("Enter your age")
+       document.getElementById("question5.2").innerHTML = "Your are " + age + " years old";
+
+    </script>
+</body>
+</html>
